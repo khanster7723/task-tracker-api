@@ -40,7 +40,7 @@ mongoose.connect(
 );
 
 //Start Listening
-app.listen(5000);
+app.listen(process.env.PORT || 5000);
 
 //username - admin
 //password - UiILhvioiM4yrojv
