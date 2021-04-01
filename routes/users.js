@@ -72,6 +72,17 @@ router.get("/login/:username", async (req, res) => {
   }
 });
 
+//Get a Specific User Details By Username
+router.get("/usersearch/:username", async (req, res) => {
+  //console.log(req.params.taskId)
+  try {
+    const user = await User.findOne({ username: req.params.username });
+    res.json(user);
+  } catch (err) {
+    res.json({ message: err });
+  }
+});
+
 //Delete User
 router.delete("/:userId", async (req, res) => {
   try {
