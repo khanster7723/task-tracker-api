@@ -10,6 +10,8 @@ require("dotenv/config");
 const postsRoute = require("./routes/posts");
 const tasksRoute = require("./routes/tasks");
 const usersRoute = require("./routes/users");
+const collaboratorsRoute = require("./routes/collaborators");
+const notificationsRoute = require("./routes/notifications");
 
 var imgModel = require("./models/Image");
 
@@ -28,6 +30,8 @@ app.use(cors());
 app.use("/posts", postsRoute);
 app.use("/tasks", tasksRoute);
 app.use("/users", usersRoute);
+app.use("/collaborators", collaboratorsRoute);
+app.use("/notifications", notificationsRoute);
 
 app.use(fileUpload());
 
