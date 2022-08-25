@@ -55,7 +55,7 @@ router.get("/user/:username", async (req, res) => {
 //Delete Task
 router.delete("/:taskId", async (req, res) => {
   try {
-    const removedTask = await Task.remove({ _id: req.params.taskId });
+    const removedTask = await Task.deleteOne({ _id: req.params.taskId });
     res.json(removedTask);
   } catch (err) {
     res.json({ message: err });

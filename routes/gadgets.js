@@ -53,7 +53,7 @@ router.get("/user/:username", async (req, res) => {
 });
 
 //Delete Task
-router.delete("/:gadgetsId", async (req, res) => {
+router.delete("/:gadgetId", async (req, res) => {
   try {
     const removedGadget = await Gadget.remove({ _id: req.params.gadgetId });
     res.json(removedGadget);

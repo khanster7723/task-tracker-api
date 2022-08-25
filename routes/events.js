@@ -52,7 +52,7 @@ router.get("/user/:username", async (req, res) => {
 });
 
 //Delete Task
-router.delete("/:eventsId", async (req, res) => {
+router.delete("/:eventId", async (req, res) => {
   try {
     const removedEvent = await Event.remove({ _id: req.params.eventId });
     res.json(removedEvent);
