@@ -17,7 +17,9 @@ router.post("/", async (req, res) => {
   const task = new Task({
     text: req.body.text,
     day: req.body.day,
+    lastupdatedon: req.body.lastupdatedon,
     reminder: req.body.reminder,
+    completed: req.body.completed,
     byusername: req.body.byusername,
   });
   try {
@@ -70,7 +72,9 @@ router.patch("/:taskId", async (req, res) => {
       {
         text: req.body.text,
         day: req.body.day,
+        lastupdatedon: req.body.lastupdatedon,
         reminder: req.body.reminder,
+        completed: req.body.completed,
         byusername: req.body.byusername,
       }
     );

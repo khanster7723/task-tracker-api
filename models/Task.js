@@ -9,7 +9,15 @@ const taskSchema = mongoose.Schema({
     type: String,
     require: true,
   },
+  lastupdatedon: {
+    type: String,
+    require: true,
+  },
   reminder: {
+    type: Boolean,
+    default: false,
+  },
+  completed: {
     type: Boolean,
     default: false,
   },
